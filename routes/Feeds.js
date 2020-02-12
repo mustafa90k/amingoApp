@@ -10,11 +10,11 @@ router.post(
     "/create",  //https://www.myapp.com/feeds.create
     (req, res)=>{
         const formdata={
-'description':req.body.description,
+'offers':req.body.offers,
 'image':req.body.image,
 'hashtage':req.body.hashtage,
-'share':req.body.share,
-'likes':req.body.likes,
+'recommendation':req.body.recommendation,
+'rating':req.body.rating,
 'date':req.body.date
     }
 const theFeedModel = new FeedModel(formdata);

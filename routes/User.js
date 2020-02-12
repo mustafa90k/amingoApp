@@ -17,7 +17,12 @@ router.post(
 'lastname':req.body.lastname,
 'email':req.body.email,
 'password':req.body.password,
-'occupation':req.body.occupation
+'dateOfBirth':req.body.dateOfBirth,
+'phoneNumber':req.body.phoneNumber,
+'date':req.body.date,
+'orders':req.body.orders,
+
+
     }
 const theUserModel = new UserModel(formdata);
 //step 1 . generate a salt
@@ -32,6 +37,7 @@ bcrypt.genSalt(
                 theUserModel.password = hashedPassword ;
                 theUserModel.save(); // step 4 save to database
                 res.send("User registration complete");
+                
             }
         )
     }
